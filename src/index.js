@@ -291,6 +291,9 @@ const SocialLogin = (WrappedComponent) => class SocialLogin extends Component {
       }
     }
 
+    additionnalProps.isFetching = this.state.isFetching
+    additionnalProps.isLoaded = this.state.isLoaded
+
     return (
       <WrappedComponent triggerLogin={this.login} {...additionnalProps} {...originalProps} />
     )
